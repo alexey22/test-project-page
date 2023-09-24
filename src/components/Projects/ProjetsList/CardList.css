@@ -1,0 +1,31 @@
+.card-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 42px;
+  padding: 0;
+  margin: 0;
+  padding-top: 180px;
+  padding-bottom: 424px;
+}
+
+@media screen and (max-width: 1279px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 112px;
+    column-gap: 24px;
+    row-gap: 22px;
+    padding-bottom: 224px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card-list {
+    grid-template-columns: 1fr;
+    padding-top: 97px;
+    padding-bottom: 224px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}

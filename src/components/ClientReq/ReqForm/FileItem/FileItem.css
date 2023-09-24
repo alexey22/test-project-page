@@ -1,0 +1,54 @@
+.file-item {
+  border-radius: 3px;
+  background-color: #9aa8ba;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 382px;
+  margin-right: 37px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.file-item:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.file-item__name {
+  padding-left: 12px;
+  color: #292b35;
+  max-width: 234px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.file-item__size {
+  color: #eff3ff;
+  margin-left: 16px;
+  white-space: nowrap;
+}
+
+.file-item__delete {
+  background-image: url('../../../../images/file-delete.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-size: 6px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .file-item__name {
+    max-width: 159px;
+    padding-left: 9px;
+  }
+
+  .file-item__size {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,84 @@
+.client-req {
+  background-color: #fff;
+  width: 100%;
+}
+
+.client-req__container {
+  margin: 0 auto;
+  max-width: 1230px; /*1240?*/
+  color: #303958;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 95px 65px;
+}
+
+.client-req__title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 45px;
+  max-width: 400px;
+  margin: 0;
+  padding-top: 14px;
+}
+
+.client-req__text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 455px;
+  margin: 0;
+  padding-top: 34px;
+}
+
+.client-req__image {
+  width: 156px;
+  display: block;
+}
+
+@media screen and (max-width: 1240px) {
+  .client-req__container {
+    flex-direction: column;
+    max-width: 596px;
+  }
+
+  .client-req__title {
+    padding-top: 23px;
+  }
+
+  .client-req__text {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .client-req__container {
+    padding-top: 47px;
+    padding-bottom: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .client-req__header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .client-req__image {
+    width: 76px;
+    padding-top: 11px;
+  }
+
+  .client-req__title {
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 21px;
+    margin-left: 28px;
+  }
+
+  .client-req__text {
+    display: none;
+  }
+}
