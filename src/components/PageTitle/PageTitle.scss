@@ -1,0 +1,18 @@
+@import '../../styles/fonts';
+
+.page-title {
+  @include font-h1-desktop;
+  color: #303958;
+  padding-top: 76px;
+  margin: 0;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 95px;
+  }
+
+  @media screen and (max-width: 700px) {
+    @include font-h1-mobile;
+    padding-top: 39px;
+    padding-bottom: 0;
+  }
+}

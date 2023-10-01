@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom';
 
-import pages from '../../../utils/pages';
-
 import './NavFooter.css';
 
 function NavFooter() {

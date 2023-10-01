@@ -1,0 +1,65 @@
+@import '../../styles/colors.css';
+
+.header {
+  background-color: transparent;
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  z-index: 5;
+
+  &__container {
+    height: 158px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 65px;
+    background-color: transparent;
+  }
+
+  &__logo {
+    color: $color-accent;
+  }
+
+  &__logo svg {
+    display: block;
+  }
+
+  &__logo:hover {
+    color: $color-header-logo-hover;
+    transition: 0.2s;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    background-color: $color-header-background-mobile;
+
+    &__logo svg {
+      width: 140.5px;
+      height: 29.59px;
+    }
+
+    .header__container {
+      height: 68px;
+      max-width: 830px;
+    }
+
+    &__theme-switch {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    &__container {
+      padding: 0 25px;
+    }
+
+    &__logo svg {
+      width: 92px;
+    }
+  }
+}

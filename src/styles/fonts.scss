@@ -1,0 +1,22 @@
+$font-stack: 'Rubik', sans-serif;
+
+@mixin font-h1-desktop {
+  font-family: $font-stack;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 45px;
+}
+
+@mixin font-h1-mobile {
+  font-family: $font-stack;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 24.9px;
+}
+
+@mixin font-default-desktop {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}

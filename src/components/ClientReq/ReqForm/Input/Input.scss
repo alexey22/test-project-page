@@ -1,0 +1,59 @@
+.input {
+  border: solid 1px #9aa8ba;
+  border-radius: 8px;
+  height: 56px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding-left: 18px;
+  box-sizing: border-box;
+  /* max-width: 596px; */
+  outline: none;
+  width: 100%;
+
+  &:focus + .input__label {
+    top: -6px;
+  }
+
+  &__label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 16px;
+    align-self: flex-start;
+    margin-left: 8px;
+    position: absolute;
+    top: 22px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.3s;
+    border-radius: 7px;
+  }
+
+  &__label_filled {
+    top: -6px;
+  }
+
+  &_invalid {
+    border-color: #e83b3b;
+  }
+
+  &__error-massage_visible_on {
+    content: 'Некорректное значение';
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    left: 0;
+    top: 0;
+    color: #e83b3b;
+  }
+
+  &__error-massage_visible_off {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+@import url(./vendor/styles/normalize.css);
+
+@import url(./vendor/fonts/fonts.css);
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+div[id='root'] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(-45deg, #fff, #e9ecf6);
+
+  &::before {
+    background-image: url('../src/images/background-pattern.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    content: '';
+    display: block;
+    width: 698px;
+    height: 974px;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    opacity: 0.7;
+  }
+}
+
+.main {
+  background-color: transparent;
+  width: 100%;
+  flex-grow: 1;
+  z-index: 0;
+
+  &__container {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div[id='root']::before {
+    top: 68px;
+    background-size: 50%;
+    background-position-x: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main__container {
+    padding: 0 25px;
+  }
+
+  div[id='root']::before {
+    top: 68px;
+    background-size: 40%;
+    background-position-x: 100%;
+  }
+}

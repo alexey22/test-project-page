@@ -1,0 +1,200 @@
+.req-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 596px;
+
+  &__input {
+    position: relative;
+  }
+
+  &__textarea-with-file {
+    border: solid 1px #9aa8ba;
+    border-radius: 8px;
+    margin-top: 33px;
+    padding: 20px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  &__textarea {
+    border: 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    outline: 0;
+  }
+
+  &__textarea-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 16px;
+    align-self: flex-start;
+    margin-left: -12px;
+    position: absolute;
+    top: 22px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.3s;
+    border-radius: 7px;
+  }
+
+  &__textarea:focus + .req-form__textarea-label {
+    top: -6px;
+  }
+
+  &__textarea-label_filled {
+    top: -6px;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__file {
+    display: none;
+  }
+
+  &__file-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex-grow: 1;
+  }
+
+  &__add-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-image: url('../../../images/file-attach.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 35px;
+    padding: 19px 86px 20px;
+    background-color: #2d76f9;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 36px;
+    margin-bottom: 80px;
+  }
+
+  &__button:hover {
+    background-color: #0359f3;
+  }
+
+  &__agreement {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-top: 43px;
+  }
+
+  &__status {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__status_success_yes {
+    color: #8fd97d;
+  }
+
+  &__status_success_no {
+    color: #e83b3b;
+  }
+
+  &__input:first-of-type {
+    margin-top: 7px;
+  }
+
+  &__input:not(:first-of-type) {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .req-form {
+    &__input:first-of-type {
+      margin-top: 33px;
+    }
+
+    &__button {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    &__agreement {
+      margin-top: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .req-form {
+    &__send {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__button {
+      margin-top: 42px;
+      margin-bottom: 0;
+    }
+
+    &__agreement {
+      margin-top: 26px;
+      text-align: center;
+    }
+
+    &__status {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .req-form {
+    &__textarea-with-file {
+      padding: 14px;
+    }
+
+    &__img {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+  }
+}

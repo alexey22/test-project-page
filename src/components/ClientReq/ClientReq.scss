@@ -1,0 +1,84 @@
+@import '../../styles/fonts.scss';
+
+.client-req {
+  background-color: #fff;
+  width: 100%;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1230px; /*1240?*/
+    color: #303958;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 95px 65px;
+  }
+
+  &__title {
+    @include font-h1-desktop;
+    max-width: 400px;
+    margin: 0;
+    padding-top: 14px;
+  }
+
+  &__text {
+    @include font-default-desktop;
+    max-width: 455px;
+    margin: 0;
+    padding-top: 34px;
+  }
+
+  &__image {
+    width: 156px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .client-req {
+    &__container {
+      flex-direction: column;
+      max-width: 596px;
+    }
+
+    &__title {
+      padding-top: 23px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .client-req {
+    &__container {
+      padding-top: 47px;
+      padding-bottom: 100px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__image {
+      width: 76px;
+      padding-top: 11px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+      padding-top: 21px;
+      margin-left: 28px;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+}
