@@ -33,7 +33,7 @@ function Projects() {
         <div className='main__container'>
           <Breadcrumbs />
           <PageTitle />
-          <Filter setCategory={handleSetCategory} />
+          <Filter setCategory={handleSetCategory} category={category} />
           <CardList cards={cards} category={category} />
         </div>
       </main>

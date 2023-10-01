@@ -9,7 +9,7 @@ const buttons = [
   'Юзабилити-аудит',
 ];
 
-function Filter({ setCategory }) {
+function Filter({ setCategory, category }) {
   function handleFilterButtonClick(category) {
     setCategory(category);
   }
@@ -21,6 +21,7 @@ function Filter({ setCategory }) {
           title={button}
           key={button}
           onClick={() => handleFilterButtonClick(button)}
+          isActive={button === category ? true : false}
         />
       ))}
     </section>
